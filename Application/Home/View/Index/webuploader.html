@@ -3,16 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>WepUpload超大文件上传</title>
-    <webuploadercss />
+    <link rel="stylesheet" href="__STATICS__/webuploader-0.1.5/webuploader.css">
+
 </head>
 <body>
 <form action="{:U('Home/Index/webuploader')}" method="post">
+
+    <div id="thelist" class="uploader-list"></div>
+    <div class="btns">
+        <div id="picker"></div>
+
+        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+    </div>
+    <div class="progress" style="display: none;">
+        <span class="text">0%</span>
+        <span class="percentage"></span>
+    </div>
+
     <!--用来存放文件信息-->
-    <webuploader name="image" url="{:U('Home/Index/ajax_upload')}" word="请将文件拖到这里，单次最多300个"/>
+    <!--
+    <div id="id_name" class="xb-uploader">
+        <div class="queueList">
+            <div class="placeholder">
+                <div class="picker">选择文件</div>
+                <p>拖拽文件到这里</p>
+            </div>
+        </div>
+        <div class="statusBar" style="display:none;">
+            <div class="progress">
+                <span class="text">0%</span>
+                <span class="percentage"></span>
+            </div>
+            <div class="info"></div>
+            <div class="btns">
+                <div class="webuploader-container filePicker2">
+                    <div class="webuploader-pick">继续添加</div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; overflow: hidden;" id="rt_rt_1armv2159g1o1i9c2a313hadij6">
+                    </div>
+                </div>
+                <div class="uploadBtn">开始上传</div>
+            </div>
+        </div>
+    </div>
+    -->
     自定义附加字段：<input type="text" name="extend" value="上传的文件描述">
     <input type="submit" value="提交">
 </form>
 
-<webuploaderjs />
+<script type="text/javascript" src="__STATICS__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="__STATICS__/webuploader-0.1.5/webuploader.min.js"></script>
 </body>
 </html>
