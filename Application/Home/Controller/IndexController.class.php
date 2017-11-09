@@ -24,7 +24,7 @@ class IndexController extends BaseController {
 
         // 如果是post提交则显示上传的文件 否则显示上传页面
         if(IS_POST){
-            p($_POST);die;
+            p($_POST);
         }else{
             $this->display();
         }
