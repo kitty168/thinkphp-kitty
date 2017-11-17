@@ -2164,14 +2164,7 @@
              * }
              * ```
              */
-            compress: {
-                width: 1600,
-                height: 1600,
-                quality: 90,
-                allowMagnify: false,
-                crop: false,
-                preserveHeaders: true
-            }
+            compress: false
         });
     
         return Uploader.register({
